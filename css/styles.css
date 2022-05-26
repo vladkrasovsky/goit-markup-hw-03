@@ -17,6 +17,7 @@
   --portfolio-border-color: #eeeeee;
   /* paddings */
   --section-padding: 94px;
+  --footer-padding: 60px;
 }
 
 body {
@@ -157,6 +158,7 @@ body {
 }
 
 .logo {
+  display: inline-block;
   font: 700 26px 'Raleway', sans-serif;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -288,22 +290,19 @@ body {
 
 /* -----------------------FOOTER--------------------- */
 .footer {
-  padding-bottom: 51px;
-  padding-top: 60px;
+  padding-bottom: var(--footer-padding);
+  padding-top: var(--footer-padding);
   background-color: var(--section-bg-dark);
 }
-.footer-link {
-  display: block;
+.footer-logo {
+  margin-bottom: 20px;
+}
+.footer-address {
   font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
 }
-
-.address {
-  margin-bottom: 0;
-  margin-top: 20px;
-}
-.address-item {
+.footer-address-item:not(:last-child) {
   margin-bottom: 9px;
+}
+.footer-link {
+  line-height: 1.71;
 }
