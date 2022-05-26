@@ -15,24 +15,35 @@
   --card-bg: #ffffff;
   --header-border-color: #ececec;
   --portfolio-border-color: #eeeeee;
+
   /* paddings */
-  --section-padding: 94px;
+  --container-padding: 15px;
   --footer-padding: 60px;
+  --header-padding: 24px;
+  --section-padding: 94px;
+
+  /* typography */
+  --font-default: 'Roboto', sans-serif;
+  --font-secondary: 'Raleway', sans-serif;
+  --font-size-default: 14px;
+  --letter-spacing-default: 0.03em;
+  --letter-spacing-sm: 0.02em;
+  --letter-spacing-lg: 0.06em;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.03em;
+  font-family: var(--font-default);
+  font-size: var(--font-size-default);
+  letter-spacing: var(--letter-spacing-default);
   color: var(--text-color);
   background-color: var(--main-bg);
 }
 
-/* -----------------------UTILITY_CLASSES------------ */
+/* -----------------------UTILITY CLASSES------------ */
 .container {
   width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
   margin: 0 auto;
   /* debug */
   /* outline: 1px dashed red; */
@@ -47,13 +58,14 @@ body {
   font-size: 16px;
   line-height: 1.875;
   text-align: center;
-  letter-spacing: 0.06em;
+  letter-spacing: var(--letter-spacing-lg);
   color: var(--text-color-dark);
   background-color: var(--button-bg);
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
+/* button states */
 .button:hover,
 .button:focus,
 .filter-item.current .filter-button {
@@ -70,12 +82,13 @@ body {
 .button-accent:focus {
   background-color: var(--accent-color-dark);
 }
+/* button variants */
 .button-small {
   min-width: auto;
   padding: 6px 22px;
   font-weight: 500;
   line-height: 1.625;
-  letter-spacing: 0.03em;
+  letter-spacing: var(--letter-spacing-default);
 }
 
 .image {
@@ -116,7 +129,7 @@ body {
   font-size: 36px;
   line-height: 1.16;
   color: var(--text-color-dark);
-  letter-spacing: 0.03em;
+  letter-spacing: var(--letter-spacing-default);
 }
 
 .section-title.centered {
@@ -142,16 +155,15 @@ body {
 
 /* -----------------------HEADER--------------------- */
 .header {
-  padding-bottom: 24px;
-  padding-top: 24px;
+  padding-bottom: var(--header-padding);
+  padding-top: var(--header-padding);
   border-bottom: 1px solid var(--header-border-color);
 }
 
 .header-link {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--letter-spacing-sm);
 }
 .header-list-item.current .header-link {
   color: var(--accent-color);
@@ -159,9 +171,9 @@ body {
 
 .logo {
   display: inline-block;
-  font: 700 26px 'Raleway', sans-serif;
+  font: 700 26px var(--font-secondary);
   line-height: 1.19;
-  letter-spacing: 0.03em;
+  letter-spacing: var(--letter-spacing-default);
 }
 .logo-dark,
 .logo-dark:hover,
@@ -185,7 +197,7 @@ body {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  letter-spacing: 0.06em;
+  letter-spacing: var(--letter-spacing-lg);
   text-transform: uppercase;
   color: var(--text-color-light);
 }
@@ -194,19 +206,20 @@ body {
 .benefits {
   padding-bottom: calc(var(--section-padding) / 2);
 }
+.benefits-item-title,
+.benefits-item-text {
+  margin-top: 0;
+}
 .benefits-item-title {
   margin-bottom: 10px;
-  margin-top: 0;
   font-weight: 700;
-  font-size: 14px;
+  font-size: var(--font-size-default);
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--text-color-dark);
 }
 .benefits-item-text {
   margin-bottom: 0;
-  margin-top: 0;
-  font-size: 14px;
   line-height: 1.71;
 }
 
@@ -221,25 +234,20 @@ body {
 }
 
 .card {
-  text-align: center;
   background-color: var(--card-bg);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.card-image {
-  margin-left: auto;
-  margin-right: auto;
-}
 .card .card-body {
-  padding: 30px 15px;
+  padding: 30px 24px;
 }
 .card-title,
 .card-text {
   margin-top: 0;
   font-size: 16px;
   line-height: 1.188;
-  letter-spacing: 0.03em;
+  letter-spacing: var(--letter-spacing-default);
 }
 .card-title {
   margin-bottom: 10px;
@@ -248,6 +256,14 @@ body {
 }
 .card-text {
   margin-bottom: 0;
+}
+/* card variants */
+.card.centered {
+  text-align: center;
+}
+.card.centered .card-image {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ----------------------PORTFOLIO------------------- */
@@ -277,14 +293,14 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  letter-spacing: 0.06em;
+  letter-spacing: var(--letter-spacing-lg);
   color: var(--text-color-dark);
 }
 .portfolio-item-text {
   margin-bottom: 0;
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 0.03em;
+  letter-spacing: var(--letter-spacing-default);
   color: var(--text-color);
 }
 
