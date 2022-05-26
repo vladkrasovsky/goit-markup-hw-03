@@ -204,19 +204,10 @@ body {
 
 /* -----------------------WORK----------------------- */
 .work {
-  padding-bottom: 64px;
   padding-top: calc(var(--section-padding) / 2);
-  text-align: center;
 }
 .work-list {
-  padding-left: 0;
-  margin-bottom: 0;
-  margin-top: 0;
   font-size: 0;
-}
-.work-item {
-  display: inline-block;
-  margin: 0 15px 30px;
 }
 
 /* -----------------------TEAM----------------------- */
