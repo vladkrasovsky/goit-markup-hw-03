@@ -77,6 +77,12 @@ body {
   letter-spacing: 0.03em;
 }
 
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .link {
   text-decoration: none;
   color: inherit;
@@ -206,21 +212,12 @@ body {
 .work {
   padding-top: calc(var(--section-padding) / 2);
 }
-.work-list {
-  font-size: 0;
-}
 
 /* -----------------------TEAM----------------------- */
 .team {
   padding-bottom: 64px;
   text-align: center;
   background-color: var(--section-bg-light);
-}
-.team-list {
-  padding-left: 0;
-  margin-bottom: 0;
-  margin-top: 0;
-  font-size: 0;
 }
 
 .card {
@@ -272,12 +269,6 @@ body {
   margin-right: 8px;
 }
 
-.portfolio-list {
-  margin: 0;
-  padding: 0;
-  font-size: 0;
-  text-align: center;
-}
 .portfolio-item {
   display: inline-block;
   margin: 15px;
