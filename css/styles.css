@@ -35,11 +35,13 @@ body {
 }
 
 .button {
+  display: inline-block;
+  min-width: 200px;
   padding: 10px 32px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: 1.875;
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--text-color-dark);
@@ -65,6 +67,7 @@ body {
   background-color: var(--accent-color-dark);
 }
 .button-small {
+  min-width: auto;
   padding: 6px 22px;
   font-weight: 500;
   line-height: 1.625;
