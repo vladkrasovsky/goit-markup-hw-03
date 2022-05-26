@@ -25,6 +25,15 @@ body {
 }
 
 /* -----------------------UTILITY_CLASSES------------ */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  /* debug */
+  /* outline: 1px dashed red; */
+}
+
 .button {
   padding: 10px 32px;
   font-family: inherit;
