@@ -161,9 +161,6 @@ body {
 
 /* -----------------------HERO----------------------- */
 .hero {
-  /* min-height: 600px; */
-  padding-bottom: 50px;
-  padding-top: 50px;
   text-align: center;
   background-color: var(--section-bg-dark);
 }
