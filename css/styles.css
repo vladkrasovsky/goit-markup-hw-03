@@ -108,6 +108,7 @@ body {
   margin-top: 0;
   font-size: 36px;
   line-height: 1.16;
+  text-align: center;
   color: var(--text-color-dark);
   letter-spacing: 0.03em;
 }
