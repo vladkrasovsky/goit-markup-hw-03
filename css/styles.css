@@ -232,6 +232,15 @@ body {
 .benefits {
   padding-bottom: calc(var(--section-padding) / 2);
 }
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+.benefits-item {
+  width: 270px;
+  margin: 15px;
+}
 .benefits-item-title,
 .benefits-item-text {
   margin-top: 0;
