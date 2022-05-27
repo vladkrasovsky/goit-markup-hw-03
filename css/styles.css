@@ -17,7 +17,8 @@
   --portfolio-border-color: #eeeeee;
   --footer-link-color: rgba(255, 255, 255, 0.6);
 
-  /* paddings */
+  /* sizes */
+  --container-width: 1200px;
   --container-padding: 15px;
   --footer-padding: 60px;
   --header-padding: 32px;
@@ -33,6 +34,7 @@
 }
 
 body {
+  min-width: var(--container-width); /* fixed layout width */
   font-family: var(--font-default);
   font-size: var(--font-size-default);
   letter-spacing: var(--letter-spacing-default);
@@ -42,7 +44,7 @@ body {
 
 /* -----------------------UTILITY CLASSES------------ */
 .container {
-  width: 1200px;
+  width: var(--container-width);
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
   margin: 0 auto;
