@@ -211,6 +211,9 @@ body {
 
 /* -----------------------HERO----------------------- */
 .hero {
+  display: flex;
+  align-items: center;
+  min-height: 600px;
   text-align: center;
   background-color: var(--section-bg-dark);
 }
