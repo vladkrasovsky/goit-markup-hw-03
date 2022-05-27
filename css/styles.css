@@ -15,6 +15,7 @@
   --card-bg: #ffffff;
   --header-border-color: #ececec;
   --portfolio-border-color: #eeeeee;
+  --footer-link-color: rgba(255, 255, 255, 0.6);
 
   /* paddings */
   --container-padding: 15px;
@@ -385,4 +386,11 @@ body {
 }
 .footer-link {
   line-height: 1.71;
+}
+.footer-link:not(.link-light) {
+  color: var(--footer-link-color);
+}
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent-color);
 }
