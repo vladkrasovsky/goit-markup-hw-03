@@ -19,10 +19,12 @@
 
   /* sizes */
   --container-width: 1200px;
-  --container-padding: 15px;
   --footer-padding: 60px;
   --header-padding: 32px;
   --section-padding: 94px;
+
+  /* gutters */
+  --gutter-default: 30px;
 
   /* typography */
   --font-default: 'Roboto', sans-serif;
@@ -47,8 +49,8 @@ body {
 /* -----------------------UTILITY CLASSES------------ */
 .container {
   width: var(--container-width);
-  padding-left: var(--container-padding);
-  padding-right: var(--container-padding);
+  padding-left: calc(var(--gutter-default) / 2);
+  padding-right: calc(var(--gutter-default) / 2);
   margin: 0 auto;
   /* debug */
   /* outline: 1px dashed red; */
@@ -76,7 +78,7 @@ body {
 /* button states */
 .button:hover,
 .button:focus,
-.filter-item.current .filter-button {
+.filter-item.current .button {
   color: var(--text-color-light);
 
   background-color: var(--accent-color);
@@ -99,6 +101,21 @@ body {
   font-weight: 500;
   line-height: 1.625;
   letter-spacing: var(--letter-spacing-default);
+}
+
+.card-set {
+  display: flex; /* Робимо Flex-контейнер багаторядковим */
+  flex-wrap: wrap; /* Компенсуємо відступи елементів */
+  margin-left: calc(var(--gutter-default) * -1);
+  margin-top: calc(var(--gutter-default) * -1);
+  margin-bottom: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.card-set > .item {
+  flex-basis: calc((100% / 4) - var(--gutter-default));
+  margin-left: var(--gutter-default);
+  margin-top: var(--gutter-default);
 }
 
 .image {
@@ -250,15 +267,6 @@ body {
 .benefits {
   padding-bottom: calc(var(--section-padding) / 2);
 }
-.benefits-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
-}
-.benefits-item {
-  width: 270px;
-  margin: 15px;
-}
 .benefits-item-title,
 .benefits-item-text {
   margin-top: 0;
@@ -281,28 +289,13 @@ body {
 .work {
   padding-top: calc(var(--section-padding) / 2);
 }
-.work-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
-}
-.work-item {
-  width: 370px;
-  margin: 15px;
+.work-list > .item {
+  flex-basis: calc((100% / 3) - var(--gutter-default));
 }
 
 /* -----------------------TEAM----------------------- */
 .team {
   background-color: var(--section-bg-light);
-}
-.team-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
-}
-.team-list .card {
-  width: 270px;
-  margin: 15px;
 }
 
 .card {
@@ -349,22 +342,19 @@ body {
 .filter-item:not(:last-child) {
   margin-right: 8px;
 }
-
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
+.portfolio-list > .item {
+  flex-basis: calc((100% / 3) - var(--gutter-default));
 }
 .portfolio-item {
-  width: 370px;
-  margin: 15px;
-
   background-color: var(--card-bg);
 }
 .portfolio-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .portfolio-item-body {
+  flex-grow: 1;
   display: block;
   padding: 20px 24px;
 
