@@ -322,10 +322,21 @@ body {
 /* ----------------------PORTFOLIO------------------- */
 .filter {
   margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+.filter-item:not(:last-child) {
+  margin-right: 8px;
 }
 
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
 .portfolio-item {
-  margin-bottom: 30px;
+  width: 370px;
+  margin: 15px;
   background-color: var(--card-bg);
 }
 .portfolio-link {
