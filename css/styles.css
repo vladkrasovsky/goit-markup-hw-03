@@ -276,6 +276,15 @@ body {
 .team {
   background-color: var(--section-bg-light);
 }
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+.team-list .card {
+  width: 270px;
+  margin: 15px;
+}
 
 .card {
   background-color: var(--card-bg);
