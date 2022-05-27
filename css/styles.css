@@ -19,7 +19,7 @@
   /* paddings */
   --container-padding: 15px;
   --footer-padding: 60px;
-  --header-padding: 24px;
+  --header-padding: 32px;
   --section-padding: 94px;
 
   /* typography */
@@ -118,6 +118,25 @@ body {
   list-style-type: none;
 }
 
+.logo {
+  display: inline-block;
+  font-family: var(--font-secondary);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.19;
+  letter-spacing: var(--letter-spacing-default);
+}
+.logo-dark,
+.logo-dark:hover,
+.logo-dark:focus {
+  color: var(--logo-color-dark);
+}
+.logo-light,
+.logo-light:hover,
+.logo-light:focus {
+  color: var(--logo-color-light);
+}
+
 .section {
   padding-bottom: var(--section-padding);
   padding-top: var(--section-padding);
@@ -155,37 +174,39 @@ body {
 
 /* -----------------------HEADER--------------------- */
 .header {
-  padding-bottom: var(--header-padding);
-  padding-top: var(--header-padding);
   border-bottom: 1px solid var(--header-border-color);
 }
-
+.header-wrap {
+  display: flex;
+  align-items: center;
+}
+.header-logo {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+.header-nav {
+  margin-left: 93px;
+}
+.header-list {
+  display: flex;
+}
+.header-list-item:not(:last-child) {
+  margin-right: 50px;
+}
 .header-link {
+  display: block;
+  padding-bottom: var(--header-padding);
+  padding-top: var(--header-padding);
   font-weight: 500;
-  line-height: 1.14;
+  line-height: calc(16 / 14); /* need equal value to get propper height (80px) of header */
   letter-spacing: var(--letter-spacing-sm);
 }
 .header-list-item.current .header-link {
   color: var(--accent-color);
 }
-
-.logo {
-  display: inline-block;
-  font-family: var(--font-secondary);
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.19;
-  letter-spacing: var(--letter-spacing-default);
-}
-.logo-dark,
-.logo-dark:hover,
-.logo-dark:focus {
-  color: var(--logo-color-dark);
-}
-.logo-light,
-.logo-light:hover,
-.logo-light:focus {
-  color: var(--logo-color-light);
+.header-contacts {
+  margin-left: auto;
 }
 
 /* -----------------------HERO----------------------- */
