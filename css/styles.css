@@ -171,7 +171,9 @@ body {
 
 .logo {
   display: inline-block;
-  font: 700 26px var(--font-secondary);
+  font-family: var(--font-secondary);
+  font-size: 26px;
+  font-weight: 700;
   line-height: 1.19;
   letter-spacing: var(--letter-spacing-default);
 }
