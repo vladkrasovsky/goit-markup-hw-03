@@ -262,6 +262,15 @@ body {
 .work {
   padding-top: calc(var(--section-padding) / 2);
 }
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+.work-item {
+  width: 370px;
+  margin: 15px;
+}
 
 /* -----------------------TEAM----------------------- */
 .team {
