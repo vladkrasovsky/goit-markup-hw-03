@@ -243,9 +243,8 @@ body {
 
 /* -----------------------HERO----------------------- */
 .hero {
-  display: flex;
-  align-items: center;
-  min-height: 600px;
+  padding-bottom: 200px;
+  padding-top: 200px;
 
   text-align: center;
 
